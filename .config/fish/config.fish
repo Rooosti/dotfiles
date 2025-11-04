@@ -22,5 +22,10 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias ls 'eza --icons'
     alias clear "printf '\033[2J\033[3J\033[1;1H'"
     alias q 'qs -c ii'
-    
+    function sdk
+        bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk $argv"
+    end
+    function gradle
+        bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && gradle $argv"
+    end
 end
