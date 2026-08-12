@@ -29,3 +29,7 @@ if status is-interactive # Commands to run in interactive sessions can go here
         bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && gradle $argv"
     end
 end
+
+set -gx PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin
+pyenv init - | source
